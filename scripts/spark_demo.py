@@ -10,5 +10,5 @@ spark = SparkSession.builder.appName("Load jsontest Data").config("hive.metastor
 sc=spark.sparkContext
 sqlContext = SQLContext(sc)
 
-df=spark.read.json("s3://cognizant-demo-2533-inbound/demo_input3.json",multiLine='true')
-df.coalesce(1).write.mode("Append").parquet("s3://cognizant-demo-2533-datalake/demoout/")
+df=spark.read.json("s3://cognizant-demo-2852-inbound/demo_input3.json",multiLine='true')
+df.coalesce(1).write.mode("Append").parquet("s3://cognizant-demo-2852-datalake/demoout/")
