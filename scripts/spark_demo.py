@@ -5,6 +5,7 @@ from pyspark.sql.types import *
 from pyspark.sql import functions as psf
 
 import os
+##
 
 spark = SparkSession.builder.appName("DataOps").config("hive.metastore.client.factory.class","com.amazonaws.glue.catalog.metastore.AWSGlueDataCatalogHiveClientFactory").enableHiveSupport().getOrCreate()
 sqlContext = SQLContext(spark)
