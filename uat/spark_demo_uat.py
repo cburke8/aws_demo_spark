@@ -12,9 +12,9 @@ sqlContext = SQLContext(spark)
 spark.sparkContext.setLogLevel("ERROR")
 
 
-bronze_path = 's3://citi-bike-batch-data-con/bronze/'
-silver_path = 's3://citi-bike-batch-data-con/silver/'
-gold_path   = 's3://citi-bike-batch-data-con/gold/'
+bronze_path = 's3://citi-bike-batch-data-test/bronze/'
+silver_path = 's3://citi-bike-batch-data-test/silver/'
+gold_path   = 's3://citi-bike-batch-data-test/gold/'
 
 trip_schema = StructType([
   StructField('tripduration', IntegerType()),
