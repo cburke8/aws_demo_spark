@@ -52,7 +52,4 @@ bronzeDF = bronzeDF.orderBy(bronzeDF.start_time.desc())
 #view top of DF
 bronzeDF.head()
 
-
 bronzeDF.write.format('parquet').mode('overwrite').save(silver_path)
-
-slvrDF = spark.read.format('parquet').load(silver_path)
